@@ -13,7 +13,7 @@ I ran the command cd with no arguments in both the lecture1 directory(as seen in
 ls with no arguments:
 
 ![image](lsNoArgs.png)
-I ran the ls command with no arguments in the home directory. When ran in the home directory, the output was lecture1, because ls, which means list, lists all of the files or directories within whatever parameter is given. When not given in argument like in this example, it will list all of the directories or files in the working directory, in this case the home directory. These results were expected and functioned as they were intended, meaning it was not an error.
+I ran the ls command with no arguments in the home directory. When ran in the home directory, the output was lecture1, because ls, which means list, lists all of the files or directories within whatever parameter is given. When not given an argument like in this example, it will list all of the directories or files in the working directory, in this case the home directory. These results were expected and functioned as they were intended, meaning it was not an error.
 
 cat with no arguments:
 
