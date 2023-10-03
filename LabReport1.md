@@ -18,7 +18,7 @@ I ran the ls command with no arguments in the home directory. When ran in the ho
 cat with no arguments:
 
 ![image](catNoArgs.png)
-I ran the cat command with no arguments in the home directory. When ran from the home directory, the shell freezes, and you have to kill the process in order to be able to use it again. This is because the cat command, short for concatenate, is meant to print out files, and since there were no files given to the command, it got stuck waiting for an input, and was never able to finish the process, causing it to freeze. This is an error, the user is supposed to use cat command on a file, not on a directory, and since it causes the shell to freeze.
+I ran the cat command with no arguments in the home directory. When ran from the home directory, the shell freezes, and you have to kill the process in order to be able to use it again. This is because the cat command, short for concatenate, is meant to print out file contents, and since there were no files given to the command, it got stuck waiting for an input, and was never able to finish the process, causing it to freeze. This is an error, the user is supposed to use cat command on a file, not on a directory, and since it causes the shell to freeze.
 
 **Using the command with a path to a directory as argument**
 ---
