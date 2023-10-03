@@ -26,7 +26,7 @@ I ran the cat command with no arguments in the home directory. When ran from the
 cd with a path to a directory as the argument:
 
 ![image](cdDirectory.png)
-I ran the cd command with a path to a directory as the argument from the home directory. When done, the working directory changes, as in the name of the command change directory, to become the one that was called. In this case the working directory became what was given as an argument, the lecture1 directory. There was no actual output besides the changing of the working directory, but this was expected. Since the directory was changed as expected, there was no error.
+I ran the cd command with a path to a directory as the argument from the home directory. When ran, as expected by the name "change directory", the directory called became the new working directory. In this case the working directory became what was given as an argument, the lecture1 directory. There was no actual output besides the changing of the working directory, but this was expected. Since the directory was changed as expected, there was no error.
 
 ls with a path to a directory as the argument:
 
