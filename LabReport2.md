@@ -18,6 +18,7 @@ This instance of /add-message also calls the method handleRequest. The relevant 
 
 Path to Private Key:
 ![image](PrivateKey.png)
+The private key is id_rsa, while the public key is id_rsa.pub. This means the path to the Private key is /Users/gavinsimmons/.ssh/id_rsa.
 
 Path to Public Key:
 ![image](PublicKey.png)
