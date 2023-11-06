@@ -7,12 +7,11 @@ Code for the String Server implementation:
 First Instance of /add-message:
 ![image](FirstAddMessage.png)
 
-This instance of /add-message calls the method handleRequest. The relevant argument for this method is the url. Within the url, the /add-message is important for saying what command is being used, and the string part following s= is important for identifying what /add-message is going to add. Implementing URLHandler is necessary in making this class function. Within the StringHandler class, List<String> messages, will change as more string messages are added to it.
+This instance of /add-message calls the method handleRequest with the URL as the given argument. In handle request, it checks to see if the path reads "add-message", which it does, then it checks the query to see if it is "s =". The variable newMessage is set to "Hello", and is then added to messages, which is orginally an empty array list. Finally, handleRequest finishes by returning each of the elements of messages, separated by a new line character, which in this case is just one line with the string Hello.
 
 Second Instance of /add-message:
 ![image](SecondAddMessage.png)
-This instance of /add-message also calls the method handleRequest. The relevant argument for this method is the url. Within the url, the /add-message is important for saying what command is being used, and the string part following s= is important for identifying what /add-message is going to add. Implementing URLHandler is necessary in making this class function. Within the StringHandler class, List<String> messages, will change as more string messages are added to it.
-
+This instance of /add-message also calls the method handleRequest with the URL as the given argument. In handleRequest, it checks again to see if the path reads "add-message", which it does, then it checks to the query to see if it is "s=". The variable newMessage is set to "How are you?", which is the given in the URL following "s=". newMessage is then added to messages, the same array list as the first instance, but this time that array list already contains the string "Hello". Finally, handleRequest returns each of the elements of messages, separated by a new line character, which in this case is two lines, the first reading "Hello" from the first isntance of /add-message, and the second reading "How are you?" from the second instance.
 
 **Part 2**
 
