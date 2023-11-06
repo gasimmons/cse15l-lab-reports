@@ -35,6 +35,7 @@ Grep -i acts just like the regular grep command, but it ignores capitalization. 
 
 ![grep -i 2](grep-i2.png)
 Grep -i displays all the lines that contain the pattern, regardless of capitalization. In this example, it returns all the lines that contain the word "protein" whether capitalized or not. This could be useful as it provides a more comprehensive list of lines, that will not miss out on any instances due to capitalization.
+
 Source: 
 [Man7.org](https://man7.org/linux/man-pages/man1/grep.1.html)
 
