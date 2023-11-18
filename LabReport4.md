@@ -28,7 +28,7 @@ Keys Pressed:
 ```  
   cd <space> lab7 <enter>
   <command v>(javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java) <enter>
-  <command v>(java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore <space> ListExamplesTests <enter>
+  <command v>(java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore) <space> ListExamplesTests <enter>
 ```
 
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Step%203.png)
