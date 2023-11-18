@@ -32,7 +32,7 @@ Keys Pressed:
 ```
 
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Step%203.png)
-Since I was in the home directory and needed to be in the lab7 directory, I used cd lab7 to get into it. From there I copied the command to compile all the files, and ran it using enter to compile everything. Finally I was able to run the commandds, again pasting the command to run the JUnit tests, but this time I also had to include the file ListExamplesTests, which contained the tests to run, then I clicked enter to run. The output was the results of the JUnit tests, in which two tests ran and one of which failed.
+Since I was in the home directory and needed to be in the lab7 directory, I used cd lab7 to get into it. From there I copied the command to compile all the files, and ran it using enter to compile everything. Finally I was able to run the commands, again pasting the command to run the JUnit tests, but this time I also had to include the file ListExamplesTests, which contained the tests to run, then I clicked enter to run. The output was the results of the JUnit tests, in which two tests ran and one of which failed.
 
 
 4. Edit the code file to fix the failing test
