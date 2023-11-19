@@ -2,63 +2,65 @@
 
 Part 1 Bugs: 
 
+Original Code:
+```java
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+
+Failure Inducing Input:
 ```java
 @Test
-public void testAverageWithoutLowestFail() {
-  double[] input = {1.0, 1.0, 1.0, 1.0, 1.0};
-  assertEquals(1.0, ArrayExamples.averageWithoutLowest(input), 0.001);
-}
+  public void testReverseInPlace2() {
+    int[] input = {1, 2, 3};
+    ArrayExamples.reverseInPlace(input);
+    //System.out.println(Arrays.toString(input));
+    assertArrayEquals(new int[] {3, 2, 1}, input);
+  }
 ```
+This test would fail, as the input's original values are overwritten while the reversal is being performed, causing it to mirror the latter half of the input. 
 
-This would fail because the implementation calls for the removal of just one instance of the lowest element, yet it removes all of them. 
 
+Input that does not Induce Failure: 
 ```java
-@Test
-public void testAverageWithoutLowestPass() {
-  double[] input = {1.0, 2.0, 3.0, 4.0};
-  assertEquals(3.0, ArrayExamples.averageWithoutLowest(input), 0.001);
-}
+@Test 
+	public void testReverseInPlace() {
+    int[] input1 = { 3, 3, 3 };
+    ArrayExamples.reverseInPlace(input1);
+    //System.out.println(Arrays.toString(input1));
+    assertArrayEquals(new int[]{ 3, 3, 3}, input1);
+	}
 ```
+Despite the incorrect implementation of the method being tested, this test would pass as the original input contains all the same values. Since the implementation mirrors the latter half of the input, and the first half and second half are identical, the method outputs an array with all the same values, identical to the input, and the expected output. 
 
-This would pass because it removes 1.0 per implementation, then finds the average of the other three elements normally. 
+The Symptom:
+![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/RunJUnit.png)
+The symptom revealing the error in the implementation is the one failed JUnit test, meaning that something is wrong in how the array was being reversed, and the expected output was not reached.
 
-![JUnit Tests Ran](JunitTest.png)
-
-When JUnit is ran, one of the two tests ran failed, and as expected it was the test where all the elements were the same. 
-
+Incorrect, Original Implementation:
 ```java
-static double averageWithoutLowest(double[] arr) {
-  if (arr.length < 2) {return 0.0;}
-  double lowest = arr[0];
-
-  for (double num: arr) {
-        if (num < lowest) { lowest = num; }
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
   }
-  double sum = 0;
-  for (double num: arr) {
-    if(num != lowest) {sum += num;}
-  }
-  return sum / (arr.length - 1);
-}
 ```
 
+Correct Implementation:
 ```java
-static double fixedAverageWithoutLowest(double[] arr) {
-  if (arr.length < 2) {return 0.0;}
-  double lowestIndex = 0;
-
-  for (int i = 1; i < arr.length; i++) {
-        if (arr[i] < arr[lowestIndex]) { lowestIndex = num; }
+static void reverseInPlace(int[] arr) {
+    int length = arr.length;
+    for(int i = 0; i < length / 2; i++) {
+      int temp = arr[i];
+      arr[i] = arr[length - i - 1];
+      arr[length - i - 1] = temp;
+    }
   }
-  double sum = 0;
-  for (int i = 0; i < arr.length; i++) {
-    if(i != lowestIndex) {sum += arr[i];}
-  }
-  return sum / (arr.length - 1);
-}
 ```
-
-The bug in the original is that it removed any element equal to the lowest value, rather than just returning one instance of the lowest elements, causing the symptom that an array of all the same element would return a average of 0, rather than the value of that element. This bug was fixed by tracking the index of the lowest value, and removing that instead, so that max only one element would be removed.
+The bug in the original code is that when it is looping through the array, it overwrites the beginning element, so when it goes to replace the ending element, it just replaces it with itself. This causes it to mirror the second half of the input array, so {1, 2, 3, 4,5} becomes {5, 4, 3, 4, 5}. I fixed it by dividing the for loop by two, then swapping the element at the beginning and the end by using a temp variable to hold the original beginning index. The swap would then occur, with the temp variable being used to prevent the beginning from being overwritten, then the for loop moves forward one element, which is to be swapped with one before the last element and so on. Overall, this fixes the implementation, and successfully reverses the array, which we know because both of the JUnit tests pass this time.
 
 
 
