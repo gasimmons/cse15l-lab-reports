@@ -2,8 +2,8 @@
 
 Part 1: Debugging Scenario
 
-1. ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%2010.05.15%20PM.png)
-Student: Hey, I keep getting these errors when I run my JUnit test, and the output seems to make me think that the merge method is adding everything to the beginning of the list, creating the reversed order.
+![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%2010.05.15%20PM.png)
+1. Student: Hey, I keep getting these errors when I run my JUnit test, and the output seems to make me think that the merge method is adding everything to the beginning of the list, creating the reversed order.
 The actual value at index 0 is always what I thought would be at the final index of the array. Could someone help to identify if this is the issue, and if so, how to fix it, thanks!
 
 2. TA: Hey student, are you sure that the bug is caused by how the strings are added to the array, or could it be something else causing the bug, such as the comparison method?
