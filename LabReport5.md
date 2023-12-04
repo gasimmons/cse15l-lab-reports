@@ -17,10 +17,9 @@ Student: Thank you for the tip, using JDB and going step by step, I noticed that
 Knowing this, I went to the line containing the comparator, and I was able to find the bug.
 I had accidently used greater than instead of less than when comparing the two strings, which resulted in adding the string that came second alphabetically first, and then the strings that come first alphabetically later.
 
-5. There are three files involved in this scenario, ListExamples, which contains the merge and filter methods, ListExamplesTests which contains JUnit tests for the previous file, and test.sh, which compiles each of the files and runs the tests.
+4. There are three files involved in this scenario, ListExamples, which contains the merge and filter methods, ListExamplesTests which contains JUnit tests for the previous file, and test.sh, which compiles each of the files and runs the tests.
    Each of the files are within the gavinsimmons/CSE15L/Lab7 directory, alongside the lib directory, which is also within Lab7, and contains the junit and hamcrest jar files.
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%209.12.44%20PM.png)
-
 
 
 Here all the files before fixing the bug:
@@ -30,12 +29,6 @@ Here all the files before fixing the bug:
 
 The bug was triggered by running the command bash test.sh, which contains commands to compile and run the tests as seen below:
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%209.35.19%20PM.png)
-
-Here is what I ran to find the bug in JDB:
-![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%209.33.05%20PM.png)
-I knew that x would not be the first thing to be sorted 
-
-
 
 
 To fix the bug, since I knew the issue was that it was selecting the later of the two string alphabetically, I went to where the comparison was being made, and flipped the greater than sign to be a less sign.
