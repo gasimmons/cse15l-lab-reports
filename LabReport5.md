@@ -1,6 +1,11 @@
 **Lab Report 5**
 
-Part<img width="920" alt="Screenshot 2023-12-03 at 10 05 15 PM" src="https://github.com/gasimmons/cse15l-lab-reports/assets/146766169/a9af8d7c-256c-469d-ba9a-9b720c06c631">
+
+<img width="920" alt="Screenshot 2023-12-03 at 10 05 15 PM" src="https://github.com/gasimmons/cse15l-lab-reports/assets/146766169/faa1ac40-7458-487f-8dc4-aac8d8039ddb">
+
+ 
+ 
+ 
  1: Debugging Scenario
 
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%2010.05.15%20PM.png)
