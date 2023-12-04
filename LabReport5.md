@@ -50,6 +50,7 @@ Less than 0 instead of greater than 0 would cause it to only enter the if statem
 
 
 Part 2: Reflection
+
 I work in a bioinformatics/computer science lab on campus, so I have had a ton of experience with bash and java prior to taking this class, and most of it ended up being review for me, however one thing that was completely new to me was JDB. 
 JDB makes debugging so much easier for me, as I no longer need to place print statements throughout my code trying to pinpoint just where the error is. 
 Being able to view the value of a variable at any specific step is really cool and helpful, because it is essentially the same as the print statements just much easier and faster.
