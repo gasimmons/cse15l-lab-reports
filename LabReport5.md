@@ -1,6 +1,7 @@
 **Lab Report 5**
 
-Part 1: Debugging Scenario
+Part<img width="920" alt="Screenshot 2023-12-03 at 10 05 15 PM" src="https://github.com/gasimmons/cse15l-lab-reports/assets/146766169/a9af8d7c-256c-469d-ba9a-9b720c06c631">
+ 1: Debugging Scenario
 
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%2010.05.15%20PM.png)
 Student: Hey, I keep getting these errors when I run my JUnit test, and the output seems to make me think that the merge method is adding everything to the beginning of the list, creating the reversed order.
