@@ -11,12 +11,13 @@ Regardless, I am not able to look at and debug your code specifically, but I rec
 Once you hit the breakpoint, you will be able to use the step command to execute the line, and you can use print result, to keep checking the value of result for when the error arises.
 Knowing where the issue occurs will make it much easier to debug your own code, good luck!
 
-3. ![]()
-Student: Thank you for the tip, using JDB and going step by step, I noticed that the merge method was sorting in almost reverse order because it was selecting for what came last alphabetically, not what came first. 
+3. Here is what I ran to find the bug in JDB:
+![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%209.33.05%20PM.png)
+Student: Thank you for the tip, using JDB and going step by step, I noticed that the merge method was sorting in almost reverse order because it was selecting for what came last alphabetically, not what came first, as X should not have been sorted first. 
 Knowing this, I went to the line containing the comparator, and I was able to find the bug.
-I had accidently used greater than instead of less than when comparing the two strings, which resulted in adding the string that came second alphabetically first, and then the strings that come first alphabetically later. 
+I had accidently used greater than instead of less than when comparing the two strings, which resulted in adding the string that came second alphabetically first, and then the strings that come first alphabetically later.
 
-4. There are three files involved in this scenario, ListExamples, which contains the merge and filter methods, ListExamplesTests which contains JUnit tests for the previous file, and test.sh, which compiles each of the files and runs the tests.
+5. There are three files involved in this scenario, ListExamples, which contains the merge and filter methods, ListExamplesTests which contains JUnit tests for the previous file, and test.sh, which compiles each of the files and runs the tests.
    Each of the files are within the gavinsimmons/CSE15L/Lab7 directory, alongside the lib directory, which is also within Lab7, and contains the junit and hamcrest jar files.
 ![](https://github.com/gasimmons/cse15l-lab-reports/blob/main/Screenshot%202023-12-03%20at%209.12.44%20PM.png)
 
